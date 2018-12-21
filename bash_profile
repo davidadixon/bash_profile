@@ -21,6 +21,7 @@
 
 #   Change Prompt
 #   ------------------------------------------------------------
+
 PROMPT_COMMAND=__prompt_command # Func to gen PS1 after CMDs
 
 __prompt_command() {
@@ -35,13 +36,15 @@ __prompt_command() {
     local BBlu='\[\e[1;34m\]'
     local Pur='\[\e[0;35m\]'
 
+    PS1+="\$ ${RCol}\t :${BBlu} \d : ${Pur}\w${BYel} .. ${RCol}\n"
+
     if [ $EXIT != 0 ]; then
-        PS1+="${Red}\u${RCol}🚫"      # Add red if exit code non 0
+        PS1+="🚫 : ${Red}\u :( ${RCol}>> "      # Add red if exit code non 0
     else
-        PS1+="${Gre}\u${RCol}✅"
+        PS1+="✅ : ${Gre}\u :) ${RCol}>> "
     fi
 
-    PS1+="${RCol}@${BBlu}\h ${Pur}\W${BYel}$ ${RCol}"
+
 }
 #   Set Paths
 #   ------------------------------------------------------------
@@ -219,7 +222,7 @@ ffe () { /usr/bin/find . -name '*'"$@" ; }  # ffe:      Find file whose name end
 #   6.  NETWORKING
 #   ---------------------------
 
-alias myip='curl ipv4.icanhazip.com'                    # myip:         Public facing IP Address
+alias myip='curl ipv4.icanhazip.com'                # myip:         Public facing IP Address
 alias netCons='lsof -i'                             # netCons:      Show all open TCP/IP sockets
 alias flushDNS='dscacheutil -flushcache'            # flushDNS:     Flush out the DNS Cache
 alias lsock='sudo /usr/sbin/lsof -i -P'             # lsock:        Display open sockets
