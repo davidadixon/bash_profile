@@ -72,6 +72,7 @@ __prompt_command() {
 #   2.  MAKE TERMINAL BETTER
 #   -----------------------------
 
+alias subl="open -a /Applications/Sublime\ Text.app"
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
