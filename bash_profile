@@ -1,6 +1,6 @@
 #  The custom prompt does not work in zsh, the new MacOSX shell.  The rest of it should, but I will work on a new one.
 #  ---------------------------------------------------------------------------
-#
+#  500
 #  Description:  This file holds all my BASH configurations and aliases
 #
 #  Sections:
